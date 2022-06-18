@@ -1,0 +1,5 @@
+#!/bin/sh
+while true; do
+  echo $(speedtest --simple) > ~/Documents/speedtest-result
+  sleep 5m
+done

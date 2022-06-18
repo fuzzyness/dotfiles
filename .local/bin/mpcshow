@@ -1,0 +1,2 @@
+#!/bin/sh
+notify-send -i ~/.config/dunst/icon/note.png -t 2000 -h string:x-canonical-private-synchronous:song "Now playing" "$(mpc | head -1)"

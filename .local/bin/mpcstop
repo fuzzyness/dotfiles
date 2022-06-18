@@ -1,0 +1,2 @@
+#!/bin/sh
+mpc stop && notify-send -i ~/.config/dunst/icon/stop.png -t 2000 -h string:x-canonical-private-synchronous:mpdstatus "Mpd stopped"

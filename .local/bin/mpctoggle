@@ -1,0 +1,2 @@
+#!/bin/sh
+mpc toggle && notify-send -i ~/.config/dunst/icon/toggle.png -t 2000 -h string:x-canonical-private-synchronous:mpdstatus "Mpd toggled"

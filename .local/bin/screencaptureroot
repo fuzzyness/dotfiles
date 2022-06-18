@@ -1,0 +1,3 @@
+#!/bin/sh
+import -window root ~/Pictures/Screenshot/"$(date +"%Y-%m-%d_%H-%M-%S")_R.png"
+notify-send -i ~/.config/dunst/icon/Screenshot.png -t 2000 "Screenshot" "$(date +"%Y-%m-%d_%H-%M-%S")_R.png"
