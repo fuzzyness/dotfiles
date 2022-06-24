@@ -1,0 +1,418 @@
+/*==================== GLOBAL COLORS ====================*/
+* {
+	--night_color1: #2E3440;
+	--night_color2: #3B4252;	
+	--night_color3: #434C5E;
+	--night_color4: #4C566A;
+
+	--snow_color1: #D8DEE9;
+	--snow_color2: #E5E9F0;
+	--snow_color3: #ECEFF4;
+
+	--frost_color1: #8FBCBB;
+	--frost_color2: #88C0D0;
+	--frost_color3: #81A1C1;
+	--frost_color4: #5E81AC;
+
+	--aurora_color1: #BF616A;
+	--aurora_color2: #D08770;
+	--aurora_color3: #EBCB8B;
+	--aurora_color4: #A3BE8C;
+	--aurora_color5: #B48EAD;
+
+	font-family: iosevka comfy !important;
+	font-size: 16px !important;
+}
+
+/*==================== DARK THEME ====================*/
+*:-moz-lwtheme-brighttext,
+toolbar[brighttext] {
+}
+
+/*==================== TABS BAR ===================*/
+#titlebar #TabsToolbar {
+	background: var(--night_color1) !important;
+}
+
+/*==================== BROWSER TAB ====================*/
+.tabbrowser-tab:not([visuallyselected="true"]), .tabbrowser-tab:-moz-lwtheme {
+	color: var(--frost_color3) !important;
+}
+
+.tabbrowser-tab > .tab-stack > .tab-background:not([selected="true"])
+{
+	background-color: var(--night_color1) !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+	background-color: var(--night_color1) !important;
+}
+
+tab[selected="true"] .tab-content {
+	color: var(--snow_color3) !important;
+}
+
+tab[selected="true"] .tab-background {
+	background: var(--night_color2) !important;
+}
+
+/*==================== TAB CLOSE BUTTON ====================*/
+.tab-close-button {
+	color: var(--frost_color1) !important;
+}
+
+/*==================== BOOKMARKS TOOLBAR ===================*/
+#PersonalToolbar {
+	background: var(--night_color1) !important;
+	color: var(--frost_color3) !important;
+}
+
+#PlacesToolbar toolbarseparator {
+	-moz-appearance: none !important;
+	background-color: var(--frost_color3) !important;
+}
+
+/*==================== CAPTION BUTTONS ====================*/
+.titlebar-button {
+	background: none !important;
+}
+
+.titlebar-button:hover > .toolbarbutton-icon {
+	background: none !important;
+}
+
+/*==================== NEW TAB BUTTON ====================*/
+toolbar #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active) > .toolbarbutton-icon,
+toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
+toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :active) > .toolbarbutton-icon {
+	fill: var(--frost_color3) !important;
+	background-color: var(--night_color1) !important;
+}
+
+toobar #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon {
+	background-color: var(--night_color3) !important;
+}
+
+/*==================== NAV BAR ====================*/
+toolbar#nav-bar {
+	background: var(--night_color1) !important;
+}
+
+toolbar#nav-bar toolbarbutton .toolbarbutton-icon,
+toolbar#nav-bar toolbarbutton #fxa-avatar-image {
+	fill: var(--frost_color3) !important;
+}
+
+#urlbar > #urlbar-background {
+	background: var(--night_color2) !important;
+}
+
+#urlbar:not([focused="true"]) > #urlbar-background,
+#urlbar > #urlbar-input-container {
+	color: var(--frost_color3) !important;
+}
+
+
+#PersonalToolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover, .tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(scrollbutton-up):hover, .tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(scrollbutton-down):hover, .findbar-button:not(:-moz-any([checked="true"], [disabled="true"])):hover, toolbarbutton.bookmark-item:not(.subviewbutton):hover:not([disabled="true"]):not([open]), toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon, toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-text, toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-stack {
+	background: var(--night_color2) !important;
+}
+
+#PersonalToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active), .findbar-button:not([disabled="true"]):-moz-any([checked="true"], :hover:active), toolbarbutton.bookmark-item:not(.subviewbutton):hover:active:not([disabled="true"]), toolbarbutton.bookmark-item[open="true"], toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon, toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-text, toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
+	background: var(--night_color3) !important;
+}
+
+*:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+	background-color: transparent !important;
+}
+
+#urlbar {
+	color: var(--frost_color3) !important;
+}
+
+.urlbarView-url {
+	color: var(--snow_color1) !important;
+}
+
+/*==================== SIDEBAR ====================*/
+#sidebar-box,
+.sidebar-panel[lwt-sidebar-brighttext]{
+	background-color: var(--night_color1) !important;
+}
+
+#sidebar-header {
+	border-color: var(--night_color2) !important;
+}
+
+.sidebar-splitter {
+	border-color: var(--night_color2) !important;
+}
+
+#sidebar-switcher-bookmarks > .toolbarbutton-icon,
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon,
+#sidebar-header,
+#sidebar-title {
+	color: var(--frost_color3) !important;
+}
+
+#sidebar-switcher-target: hover,
+#siderbar-switcher-taget: hover:active, #sidebar-switcher-target.active,
+#viewButton:hover,
+#viewButton[open] {
+	background-color: var(--night_color2) !important;
+}
+
+.sidebar-placesTreechildren {
+	color: var(--frost_color3) !important;
+}
+
+#search-box,
+.search-box {
+	-moz-appearance: none !important;
+	background-color: var(--night_color2) !important;
+	color: var(--frost_color3) !important;
+}
+
+.content-container {
+	background-color: var(--night-color1) !important;
+	color: var(--frost_color3) !important;
+}
+
+#viewButton {
+	color: var(--frost_color3) !important;
+}
+
+/*==================== CONTEXTMENU ====================*/
+/* Removes Items from Tab Context Menu */
+#context_reloadTab,
+#context_toggleMuteTab,
+#context_pinTab,
+#context_unpinTab,
+#context_duplicateTab,
+#context_openTabInWindow,
+#context_sendTabToDevice_separator,
+#context_sendTabToDevice,
+#context_reloadAllTabs,
+#context_bookmarkAllTabs,
+#context_closeTabsToTheEnd,
+#context_closeOtherTabs,
+#context_undoCloseTab,
+#context_closeTab,
+/* Removes Separators from the Tab Context Menu. Keep in mind that for each separator below there are multiple selector IDs That I was able to identify that work. You only need to choose one in order to remove the specific separator. */
+
+/* 1st separator */
+menuitem[label="Mute Tab"] + menuseparator,
+#context_toggleMuteTab+menuseparator,
+/* 2nd separator */
+menuitem[label="Move to New Window"] + menuseparator,
+#context_openTabInWindow+menuseparator,
+/* 3rd separator */
+#context_sendTabToDevice_separator,
+#context_sendTabToDevice+menuseparator,
+/* 4th separator */
+menuitem[label="Close Other Tabs"] + menuseparator,
+#context_closeOtherTabs+menuseparator,
+/* 5th separator */
+menuitem[label="Close Tab"] + menuseparator,
+#context_closeTab+menuseparator,
+/* Removes Items from Right Click Context Menu; Diagram here: https://imgur.com/b5gEfUy */
+#context-back,
+#context-forward,
+#context-reload,
+#context-stop,
+#context-bookmarkpage,
+#context-navigation,
+#context-sep-navigation,
+#context-savepage,
+#context-pocket,
+#context-sep-sendpagetodevice,
+#context-sendpagetodevice,
+#context-sep-viewbgimage,
+#context-viewbgimage,
+#context-selectall,
+#context-sep-selectall,
+#context-sep-viewsource,
+#context-viewsource,
+#context-viewinfo,
+#inspect-separator,
+#context-inspect,
+#contextAreaContextMenu > menuseparator:nth-child(92),
+#screenshots_mozilla_org_create-screenshot,
+/* Removes Items from Right Click on Selected Links Context Menu; Diagram here: https://imgur.com/e9AaMx3 */
+#context-openlinkintab,
+#context-openlinkinusercontext-menu,
+#context-openlink,
+#context-openlinkprivate,
+#context-sep-open,
+#context-bookmarklink,
+#context-savelink,
+#context-savelinktopocket,
+#context-copylink,
+#context-copy,
+#context-sep-selectall,
+#context-searchselect,
+#context-sep-sendlinktodevice,
+#context-viewpartialsource-selection,
+#inspect-separator,
+#context-inspect,
+#contextAreaContextMenu > menuseparator:nth-child(92) /* This is a Separator */
+{
+	background: var(--night_color1) !important;
+	background-color: var(--night_color1) !important;
+	color: var(--frost_color3) !important;
+}
+
+/*==================== MENU ====================*/
+menupopup {
+	-moz-appearance: none !important;
+	background-color:var(--night_color1) !important;
+	border: 0px !important;
+	min-width: 0px !important;
+	border-radius: 14px !important;
+}
+
+menuseparator {
+	-moz-appearance: none !important;
+	background-color: transparent !important;
+}
+
+menuitem, menu {
+	color: var(--frost_color3) !important;
+	padding: 0px 0px 0px 0px !important;
+	border-radius: 14px !important;
+}
+
+menuitem[diabled="true"], menuitem[disabled="true"] > .menu-text {
+	color: gray !important; 
+}
+
+menuitem:hover, menu:hover, menu[open="true"], menuitem[_moz-menuactive="true"] {
+	padding: 0px 0px 0px 0px !important; 
+	background-color: var(--night_color3) !important;
+	border-radius: 14px !important; 
+}
+
+menugroup {
+	padding: 0px !important;
+	background-color: transparent !important;
+	border-radius: 14px !important;
+}
+
+menuitem > .menu-text, menuitem > .menu-iconic-text {
+	color: white !important;
+}
+
+menuitem[type="checkbox"] {
+	padding: 0px !important;
+}
+
+menuitem[type="radio"] {
+	padding-left: 8px !important;
+	padding-top: 6.5px !important;
+	padding-bottom: 6.5px !important;
+}
+
+menuitem[type="checkbox"] > .menu-iconic-text, menuitem[type="radio"]
+> .menu-iconic-text {
+	padding-left: 5px !important;
+}
+
+menuitem[checked="true"][type="checkbox"] > .menu-iconic-left {
+	padding: 7px 0px 0px 0px !important;
+	border: solid white; 
+	border-width: 0 0 2px 2px;
+	transform: rotate(-45deg) scale(.75);
+	margin-bottom:4px !important;
+} 
+
+menuitem[checked="true"][type="radio"] > .menu-iconic-left {
+	padding: 1px !important;
+	border: solid white;
+	height: 17px !important;
+	border-radius: 100%;
+	background: white;
+	transform: scale(.5);
+}
+
+menucaption {
+	background-color: transparent !important;
+	color: white !important;
+}
+
+#ContentSelectDropdown > menupopup {
+	background-image: none !important;
+	border-radius: 14px !important;
+}
+
+#ContentSelectDropdown {
+	padding: 0px !important;
+	border-radius: 14px !important;
+}
+
+menulist {
+	padding: 4px 4px 4px 4px !important;
+	border: 2px solid #666666 !important;
+	background-color: var(--night_color1) !important;
+	border-radius: 14px !important;
+}
+
+menulist:hover {
+	padding: 4px 4px 4px 4px !important;
+	border: solid #999999 !important;
+	background-color: transparent !important;
+}
+
+menulist[open="true"] {
+	border: 0px !important;
+	background-color: #333333 !important;
+	border-radius: 14px !important;
+}
+
+#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
+	padding: 0px !important;
+	border-radius: 14px !important;
+}
+
+.menu-iconic-left {
+	-moz-appearance: none !important;
+	padding: 0px 5px 0px 9px !important;
+}
+
+.menu-right {
+	-moz-appearance: none !important;
+	color: white !important;
+	border: solid transparent;
+}
+
+tooltip {
+	-moz-appearance: none !important;
+	color: white !important;
+	background-color: #2B2B2B !important;
+	border: solid #767676 !important;
+	padding: 6.5px !important;
+}
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+#urlbar[breakout],
+#urlbar[breakout][breakout-extend] {
+ 	--urlbar-height: 32.5px !important;
+	--urlbar-toolbar-height: 32.5px !important;
+	margin-top: 3px !important;
+	width: 100% !important;
+	top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+	left: 0 !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container,
+#urlbar-input-container {
+	height: var(--urlbar-height) !important;
+	width: 100% !important;
+	padding-block: unset !important;
+	padding-incline: unset !important;
+	transition: none !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+	box-shadow: rgba(0,0,0,.05) !important;
+	animation: none !important;
+}
