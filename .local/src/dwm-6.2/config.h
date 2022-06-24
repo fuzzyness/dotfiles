@@ -14,7 +14,6 @@ static const int topbar             = 1;        /* 0 : bottom bar */
 static const int horizpadbar        = -5;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 10;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "iosevka comfy:size=22:style=Bold:antialias=true:autohint=true" };
-/* static const char *fonts[]          = { "unscii:size=22:antialias=true:autohint=true" }; */
 static const char *colors[][3]      = {
 /*                fg        bg        border   */
 [SchemeNorm] = { "#81a1c1","#2e3440","#2e3440" },
@@ -25,12 +24,7 @@ static const char *colors[][3]      = {
 };
 static const char *tags[] = { "M", "o", "e", "c", "h", "a", "o", "!" };
 /* Tags Collection */
-/* persocom   { "p", "e", "r", "s", "o", "c", "o", "m" }
- * burynice   { "b", "u", "r", "y", "n", "i", "c", "e" }
- * Yotsuba&!  { "Y", "o", "t", "s", "u", "b", "a", "&", "!" }
- * Balmung    { "B", "a", "l", "m", "u", "n", "g" } 
- * MOECHAO!   { "M", "o", "e", "c", "h", "a", "o", "!" }
- * Arrows     { "←", "↑", "→", "↓", "↕", "↖", "↗", "↘", "↙" }
+/* Arrows     { "←", "↑", "→", "↓", "↕", "↖", "↗", "↘", "↙" }
  * Subscript  { "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉" }
  * Dots       { "●", "●", "●", "●", "●", "●", "●", "●", "●" }
  * Japanese   { "一", "二", "三", "四", "五", "六", "七", "八", "九" };*/
