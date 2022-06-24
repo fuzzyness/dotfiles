@@ -12,15 +12,16 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'jreybert/vimagit'
-Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
+Plug 'arcticicestudio/nord-vim'
+Plug 'squarefrog/tomorrow-night.vim'
 Plug 'ap/vim-css-color'
 call plug#end()
 
 set title
-set bg=light
+colorscheme nord
 set go=a
 set mouse=a
 set nohlsearch
@@ -78,10 +79,6 @@ set noshowcmd
 " Check file in shellcheck:
 	map <leader>s :!clear && shellcheck -x %<CR>
 
-" Open my bibliography file in split
-	map <leader>b :vsp<space>$BIB<CR>
-	map <leader>r :vsp<space>$REFER<CR>
-
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
 
@@ -110,13 +107,6 @@ set noshowcmd
 	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo | set bg=light
 	autocmd BufRead,BufNewFile /tmp/neomutt* map ZZ :Goyo\|x!<CR>
 	autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :Goyo\|q!<CR>
-
-" Automatically deletes all trailing whitespace and newlines at end of file on save. & reset cursor position
-" 	autocmd BufWritePre * let currPos = getpos(".")
-"	autocmd BufWritePre * %s/\s\+$//e
-"	autocmd BufWritePre * %s/\n\+\%$/e
-"	autocmd BufWritePre *.[ch] %s/\%$/\r/e
-"  	autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 
 " When shortcut files are updated, renew bash and ranger configs with new material:
 	autocmd BufWritePost bm-files,bm-dirs !shortcuts
