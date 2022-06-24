@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# This file runs when a DM logs you into a graphical session.
+# If you use startx/xinit like a Chad, this file will also be sourced.
+
+~/.local/bin/dwmbar &		        # Set DWM bar on startup
+# ~/.local/bin/dwmbar-color &		# Set DWM color bar on startup
+~/.local/bin/speedtest5m &		# Set internet speed test (loops every 10 minutes) script on startup
+xrandr --dpi 96 &			# Set DPI. User may want to use a larger number for larger screens.
+~/.local/bin/setbg &			# set the background with the `setbg` script
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
+~/.local/bin/remaps &			# Run the remaps script, switching caps/esc and more; check it for more info
+# xrdb ~/.Xresources &			# Run the Xresources script, adding color to specific programs
+# /usr/bin/emacs --daemon &		# Uncomment to run emacs server daemon on startup
+
+autostart="mpd xcompmgr dunst unclutter pipewire"
+
+for program in $autostart; do
+	pidof -s "$program" || setsid -f "$program"
+done >/dev/null 2>&1
+
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+[ -n "$xrdbpid" ] && wait "$xrdbpid"
+#
